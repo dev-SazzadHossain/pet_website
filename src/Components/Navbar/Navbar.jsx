@@ -6,10 +6,8 @@ import { FaInstagram } from "react-icons/fa6";
 import { MdRestaurantMenu } from "react-icons/md";
 import { IoCloseSharp } from "react-icons/io5";
 
-const Navbar = () => {
-  const [menu, setMenu] = useState(false);
+const Navbar = ({ menu, setMenu, size, setSize }) => {
   const [searchBar, setSearch] = useState(false);
-  const [size, setSize] = useState(null);
 
   useEffect(() => {
     window.addEventListener("resize", () => {
@@ -17,6 +15,7 @@ const Navbar = () => {
       setSize(size);
       if (size > 1023) {
         setSearch(false);
+        setMenu(false);
       }
     });
   }, [size, searchBar]);
