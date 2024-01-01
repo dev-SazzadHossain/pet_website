@@ -12,12 +12,10 @@ const RootLayout = () => {
   return (
     <>
       <div className="">
-        <Containers>
-          <Navbar menu={menu} setMenu={setMenu} setSize={setSize} size={size} />
-          <Hero menu={menu} setMenu={setMenu} setSize={setSize} size={size} />
-          <Outlet />
-          <Footer />
-        </Containers>
+        <Navbar menu={menu} setMenu={setMenu} setSize={setSize} size={size} />
+        <Hero menu={menu} setMenu={setMenu} setSize={setSize} size={size} />
+        <Outlet />
+        <Footer />
       </div>
     </>
   );
